@@ -1,7 +1,7 @@
 const notes =[
     {
         id:  1, 
-        title: "test 1", 
+        title: "test 1 long title abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", 
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sagittis urna eget mi molestie, at fermentum tortor pretium. Donec eu augue ante. Sed eu dictum velit, non facilisis felis. Nullam sed ultrices augue, id vulputate arcu. Fusce aliquet neque sed augue tincidunt imperdiet. Maecenas ipsum orci, interdum vel lacus quis, egestas tincidunt ligula. Donec in erat nunc. Aliquam venenatis ligula id sapien congue, id iaculis risus pharetra. Praesent gravida fringilla turpis nec commodo. Fusce dapibus felis fermentum egestas scelerisque.",
         date: "Jan 1, 2024"
     },
