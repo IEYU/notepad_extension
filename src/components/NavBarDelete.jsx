@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { IoIosHome, IoIosTrash } from "react-icons/io";
 
 // | Back | Save | Delete |
-const NavBarSimple = () => {
+const NavBarSimple = ({ onButtonClick, onDelete }) => {
 	return (
 		<header>
 			<NavLink to={"/"} className={"btn"}>
@@ -10,8 +10,8 @@ const NavBarSimple = () => {
 					<IoIosHome />
 				</button>
 			</NavLink>
-			<button className="btn">Save</button>
-			<button className="btn">
+			<button onClick={onButtonClick}>Save</button>
+			<button className="btn" onClick={onDelete}>
 				<IoIosTrash />
 			</button>
 		</header>
