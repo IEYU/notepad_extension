@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { NavBar, NoteItem } from "../components";
-import dummyNotes from "../dummy_notes.js";
 
-const Notes = () => {
+const Notes = ({ notes }) => {
 	return (
 		<div>
 			<NavBar />
 			<div>
-				{dummyNotes.map((note) => (
+				{notes.map((note) => (
 					<NoteItem key={note.id} note={note} />
 				))}
 			</div>

@@ -1,10 +1,11 @@
-import { NavBar } from "../components";
+import { NavBar, NavBarDelete } from "../components";
+import Form from "../components/Form";
 
 const EditNote = () => {
 	return (
 		<div>
-			<NavBar />
-			<h1>edit note</h1>
+			<NavBarDelete />
+			<Form />
 		</div>
 	);
 };
