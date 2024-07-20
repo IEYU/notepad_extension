@@ -1,4 +1,8 @@
 const newButton = () => {
-	return <div>newButton</div>;
+	return (
+		<div>
+			<button>new button</button>
+		</div>
+	);
 };
 export default newButton;

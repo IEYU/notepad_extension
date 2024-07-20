@@ -1,7 +1,9 @@
+import { Button } from "bootstrap";
+
 const deleteButton = () => {
 	return (
 		<div>
-			<h1>deletebutton</h1>
+			<Button>delete</Button>
 		</div>
 	);
 };
