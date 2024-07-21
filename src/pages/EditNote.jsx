@@ -32,7 +32,6 @@ const EditNote = ({ notes, setNotes }) => {
 	const handleDelete = () => {
 		const updatedNotes = notes.filter((n) => n.id !== id);
 		setNotes(updatedNotes);
-		localStorage.setItem("notes", JSON.stringify(updatedNotes));
 		navigate("/"); // Redirect after deleting
 	};
 

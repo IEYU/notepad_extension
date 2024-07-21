@@ -1,19 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { IoIosHome } from "react-icons/io";
+import Wrapper from "../assets/wrappers/NavBarSimple";
 
-// | Back | Save |
+// | Back |   | Save |
 const NavBarSimple = ({ onButtonClick }) => {
 	return (
-		<header>
-			<NavLink to="/" className="btn">
+		<Wrapper>
+			<NavLink to={"/"}>
 				<button className="btn">
 					<IoIosHome />
 				</button>
 			</NavLink>
-			<button className="btn" onClick={onButtonClick}>
+			<button className="btn btnSave" onClick={onButtonClick}>
 				Save
 			</button>
-		</header>
+		</Wrapper>
 	);
 };
 

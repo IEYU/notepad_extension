@@ -1,16 +1,20 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Wrapper, Text, Date } from "../assets/wrappers/NoteItem";
 
 const NoteItem = ({ note }) => {
 	return (
-		<Link to={`/edit/${note.id}`} className="note">
-			<h4>
-				{/* only shows the first 20 chars of the title for readability */}
-				{note.title.length > 20
-					? note.title.substr(0, 17) + "..."
-					: note.title}
-			</h4>
-			<p>{note.date}</p>
-		</Link>
+		<Wrapper>
+			<NavLink to={`/edit/${note.id}`} className="nav-link">
+				<Text>
+					{/* only shows the first 20 chars of the title for readability */}
+					{note.title.length > 20
+						? note.title.substr(0, 17) + "..."
+						: note.title}
+				</Text>
+
+				<Date>{note.date}</Date>
+			</NavLink>
+		</Wrapper>
 	);
 };
 export default NoteItem;

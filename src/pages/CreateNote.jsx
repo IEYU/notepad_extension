@@ -18,7 +18,14 @@ const CreateNote = ({ setNotes }) => {
 		});
 
 		if (title || details) {
-			const note = { id: nanoid(), title, details, date: formattedDate };
+			let newTitle = title || "No Title"; // Set title to default value if not provided
+			let newDetails = details || ""; // Set details to default value if not provided
+			const note = {
+				id: nanoid(),
+				title: newTitle, // Use newTitle as the value for the title property
+				details: newDetails, // Use newDetails as the value for the details property
+				date: formattedDate,
+			};
 
 			// Add the note to storage
 			setNotes((prevNotes) => [note, ...prevNotes]);
@@ -31,16 +38,14 @@ const CreateNote = ({ setNotes }) => {
 
 	return (
 		<div>
-			<header>
-				<NavBarSimple onButtonClick={handleFormSubmit} />
-				<Form
-					title={title}
-					details={details}
-					setTitle={setTitle}
-					setDetails={setDetails}
-					onSubmit={handleFormSubmit}
-				/>
-			</header>
+			<NavBarSimple onButtonClick={handleFormSubmit} />
+			<Form
+				title={title}
+				details={details}
+				setTitle={setTitle}
+				setDetails={setDetails}
+				onSubmit={handleFormSubmit}
+			/>
 		</div>
 	);
 };

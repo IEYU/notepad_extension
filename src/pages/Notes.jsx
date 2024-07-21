@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
-import { NavBar, NoteItem } from "../components";
+import { Divider, NavBar, NoteItem } from "../components";
+import Wrapper from "../assets/wrappers/Note";
 
 const Notes = ({ notes }) => {
 	return (
 		<div>
-			<NavBar />
-			<div>
-				{notes.map((note) => (
-					<NoteItem key={note.id} note={note} />
-				))}
-			</div>
+			<NavBar notes={notes} />
+			<Divider />
+			<Wrapper>
+				<div>
+					{notes.map((note) => (
+						<NoteItem key={note.id} note={note} />
+					))}
+				</div>
+			</Wrapper>
 		</div>
 	);
 };

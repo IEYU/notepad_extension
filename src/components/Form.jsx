@@ -1,4 +1,11 @@
 import React from "react";
+import {
+	FormContainer,
+	StyledForm,
+	TitleInput,
+	NoteTextarea,
+	HiddenSubmitButton,
+} from "../assets/wrappers/Form";
 
 const Form = ({ title, details, setTitle, setDetails, onSubmit }) => {
 	const handleSubmit = (e) => {
@@ -10,24 +17,23 @@ const Form = ({ title, details, setTitle, setDetails, onSubmit }) => {
 	};
 
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				<input
+		<FormContainer>
+			<StyledForm onSubmit={handleSubmit}>
+				<TitleInput
 					type="text"
 					placeholder="Title"
 					value={title}
 					onChange={(e) => setTitle(e.target.value)} // set the title upon typing
 					autoFocus
 				/>
-				<textarea
-					placeholder="note..."
+				<NoteTextarea
+					placeholder="Note..."
 					value={details}
 					onChange={(e) => setDetails(e.target.value)}
 				/>
-				{/* Hidden submit button to trigger form submission */}
-				<button type="submit" style={{ display: "none" }}></button>{" "}
-			</form>
-		</div>
+				<HiddenSubmitButton type="submit" />
+			</StyledForm>
+		</FormContainer>
 	);
 };
 
