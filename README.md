@@ -6,4 +6,4 @@ A minimalist notepad created using [React](https://react.dev/) and [Styled Compo
 Designed for capturing sudden bursts of inspiration.
 
 Demo:
-[![](./demo.mp4)](./demo.mp4)
+[Simple Demo](demo.mp4)
